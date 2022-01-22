@@ -46,23 +46,25 @@ class _ProfileState extends State<Profile> {
           actions: [
             Padding(
               padding: EdgeInsets.only(right: 10),
-               child: PopupMenuButton(
-                 onSelected: (result){
-                   if(result == 0){
-                     Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()),);
-                   }
-                 },
-                 itemBuilder: (context) => [
-                   PopupMenuItem(
-                     child: Text("Edit Profile"),
-                     value: 0,
-                   )
-                 ],
-                 child: const Icon(Icons.more_vert,
-                     size: 50,
-                     color: Colors.black,
-               ),
+               child: Expanded(
+                 child: PopupMenuButton(
+                   onSelected: (result){
+                     if(result == 0){
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()),);
+                     }
+                   },
+                   itemBuilder: (context) => [
+                     PopupMenuItem(
+                       child: Text("Edit Profile"),
+                       value: 0,
+                     )
+                   ],
+                   child: const Icon(Icons.more_vert,
+                       size: 50,
+                       color: Colors.black,
+                 ),
             ),
+               ),
 
             ),
           ],
