@@ -13,9 +13,9 @@ class Design extends StatelessWidget {
     return  MaterialApp(
     debugShowCheckedModeBanner: false,
 
-    initialRoute: '/',
+    initialRoute: '/profile',
       routes: {
-        '/': (context) => const Profile(),
+        '/profile': (context) => const Profile(),
         '/editProfile': (context) => const EditProfile()
       }
     );
